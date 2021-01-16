@@ -1,0 +1,34 @@
+<script>
+    function sum(a, b=3){
+        console.log(a+b);
+    }
+    sum(6);
+    //default parameters in es6
+    const sumNum = (x, y=7) =>{
+        console.log(`number add ${x+y}`);
+    }
+    sumNum(5);
+</script>
+
+<script>
+    //rest parameters
+    const add = (...input) => {
+        console.log(...input);
+        let tot = 0;
+        for (let i of input){
+            tot += i;
+        }
+        console.log(tot);
+    }
+    add(1,4,6,7,8);
+
+    const funny = (t1,t2,...t3) => {
+        console.log(`${t1} ${t2}`);
+        console.log(t3);
+        console.log(t3[0]);
+        console.log(t3.length);
+        console.log(t3.indexOf('ram'));
+        
+    }
+    funny('hari','syam','ram','kale','kali');
+</script>
