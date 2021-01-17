@@ -1,0 +1,25 @@
+<script>
+
+    class Students{
+        constructor(name,age,grade){
+            this.s_name = name;
+            this.s_age = age;
+            this.s_grade = grade;
+        }
+        //instance method
+        info_Student(){
+            return `Hello i am ${this.s_name}, i am ${this.s_age} age old and i am grade ${this.s_grade}.`;
+        }
+    }
+    class Sports extends Students{
+        constructor(name,age,grade,game){
+            super(name,age,grade);
+            this.s_game = game;
+        }
+        info_studentgame(){
+            return `${super.info_Student()} Also i am play ${this.s_game}`;
+        }
+    }
+    let obj1 = new Sports('binod', 20, '9th', 'football');
+    console.log(obj1.info_studentgame());
+</script>
